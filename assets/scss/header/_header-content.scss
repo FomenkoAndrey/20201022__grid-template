@@ -9,6 +9,13 @@
     margin: 0 0 53px 0;
 
     text-align: center;
+
+    @media (max-width: 992px) {
+      margin: 0 0 43px 0;
+    }
+    @media (max-width: 768px) {
+      margin: 0 0 33px 0;
+    }
   }
 
   &__buttons {
@@ -16,7 +23,18 @@
     justify-content: center;
 
     .btn:first-of-type {
-      margin-right: 20px;
+      margin-right: $gap;
+
+      @media (max-width: 576px) {
+        margin-right: 0;
+        margin-bottom: $gap;
+      }
+
+    }
+
+    @media (max-width: 576px) {
+      align-items: center;
+      flex-direction: column;
     }
   }
 }
